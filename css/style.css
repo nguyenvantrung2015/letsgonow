@@ -1,0 +1,181 @@
+.nav1 {
+    background-color: #fff;
+    border-color: #fff;
+    border-bottom: 1px solid #333;
+}
+
+.nav2 {
+	background-color: #1c1c1c;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.nav3>li>a {
+    color: #fff !important; 
+}
+
+.nav3>li>a:hover {
+    color: #5af345 !important
+}
+
+.nav1>div>div>ul>li>a {
+    color: #000 !important;
+}
+
+.nav1>div>div>ul>li>a:hover
+{
+	color: #484948 !important;
+}
+
+.fix-top {
+	margin-top: 20px;
+}
+
+.thumbs-fix {
+	padding: 0px;
+    background-color: #fff;	
+    border-radius: 6px;	
+}
+
+.title-img {
+	margin-left: 10px;
+}
+
+.image-thumb {
+	height: 232px !important;
+}
+
+.fix-list-width {
+	width: 100px;
+	height: 70px;
+}
+
+.boder-list-img {
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 10px;
+	margin-top: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.img_slider >img {
+	width: 250px;
+	position: relative; 
+	height: 250px;
+}
+.img_slider >div {
+ 	position: absolute; 
+    top: 180px; 
+}
+
+.img_slider >div >h5>a,.img_slider >div>p {
+	color:#fff;
+}
+
+.address_icon {
+	color:#03ff03;
+}
+
+.recent_img >img {
+	width: 266px;
+	height: 185px;
+}
+
+.recent_img  {
+	padding: 0px;
+}
+
+.recent_post>p {
+	margin-left: 0px;
+	margin-bottom: 2px;
+}
+
+.recent_post>b {
+	font-size: 24px;
+}
+
+.list_recent_post {
+	margin-top: 10px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.footer_img>a>img {
+	width: 100px;
+	height: 70px;
+}
+
+.footer_post>p {
+	padding-left: 0px;
+}
+
+.footer_post>b>a {
+	color:#c8f2be;
+}
+
+.footer-fix {
+	margin-top: 10px;
+}
+
+.facebook {
+    height: 250px;
+}
+
+.fix-padding{
+	padding: 0px;
+}
+
+.random_post_content >div>div>p {
+	margin-left: 45px;
+}
+.random_post_content >div>div>h6 {
+	margin-left: 46px;
+	padding: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.footer {
+	background-color: #303030;
+    color: #fff;
+    margin: 0px;
+}
+.bottom_b {
+	border-bottom: 2px solid #dd3030;
+}
+
+.slider1 {
+	padding:15px 0px;
+}
+
+.slider2{
+	padding-bottom: 20px;
+}
+
+/*slide*/
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #09f;
+}
+a:hover {
+	text-decoration: none;
+}
+#back_to_camera {
+	clear: both;
+	display: block;
+	height: 80px;
+	line-height: 40px;
+	padding: 20px;
+}
+.fluid_container {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
