@@ -8,5 +8,7 @@ class StaticPagesController < ApplicationController
   end
   def contact
   end
+  def index
+  end
   
 end
