@@ -144,6 +144,11 @@
     color: #fff;
     margin: 0px;
 }
+
+.footer1 {
+	margin: 11px 0px;
+}
+
 .bottom_b {
 	border-bottom: 2px solid #dd3030;
 }
@@ -178,4 +183,8 @@ a:hover {
 	margin: 0 auto;
 	max-width: 1000px;
 	width: 90%;
+}
+
+#thumbnail-slider {
+	padding: 0px !important;
 }
