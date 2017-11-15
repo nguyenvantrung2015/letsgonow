@@ -1,0 +1,18 @@
+<h5><b class="bottom_b">RECENT POST</b></h5>
+<% @recentPosts.each do |recentPost| %>
+<div class="col-md-12 list_recent_post">
+  <div class="col-md-4 recent_img">
+    <img src="images/s1.jpg" alt="">
+  </div>
+  <div class="col-md-8 recent_post">
+    <b><a href="" title=""><%= recentPost.title %></a></b>
+    <p class="title-img"> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> 
+    <%= recentPost.updated_at %></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...
+    </p>
+    <button type="button" class="btn btn-success">Read more</button>
+  </div>
+</div>
+<% end %>

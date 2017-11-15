@@ -1,0 +1,12 @@
+<h5><b class="bottom_b">Address</b></h5>
+<div class="owl-carousel">
+  <% @addresses.each do |address| %>
+  <div class="item img_slider"><img src="images/s1.jpg" alt="">
+    <div>
+      <h5 class="text-center"><i class="fa fa-check address_icon " aria-hidden="true"></i><a href="" title=""><b> <%= address.name %></b></a></h5>
+      <p class="title-img"> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
+    </div>
+  </div>
+  <% end %>
+
+</div>
