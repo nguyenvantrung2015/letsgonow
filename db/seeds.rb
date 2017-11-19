@@ -98,19 +98,31 @@ Comment.create!([
 Image.create!([
   {id_post: 1,image: "aa"},
   {id_post: 2,image: "aa"}
-  ])
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar")
+])
+User.create!(name:  "Nguyen Dang Hai",
+ email: "example@railstutorial.org",
+ address: "so 1 Dai Co Viet, Dong Da, Ha Noi",
+ hobby: "Du lich, nghe nhac, xem phim",
+ date_of_birth: "11/10/2011",
+ phone_number: "01653724791",
+ password:              "foobar",
+ password_confirmation: "foobar")
 
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
+  address= "so #{n+1} Dai Co Viet, Dong Da, Ha Noi"
+  hobby= "Du lich, nghe nhac, xem phim"
+  date_of_birth= "11/10/201#{n+1}"
+  phone_number= "0165372479#{n+1}"
   password = "password"
   User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
+   email: email,
+   address: address,
+   hobby: hobby,
+   date_of_birth: date_of_birth,
+   phone_number: phone_number,
+   password:              password,
+   password_confirmation: password)
 end
 
