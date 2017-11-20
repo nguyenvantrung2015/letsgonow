@@ -13,4 +13,5 @@ post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 root 'static_pages#index'
 resources :users
+resources :posts
 end
