@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'faker',          '1.7.3'
 gem 'will_paginate',           '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
-
+gem 'font-awesome-sass', '~> 4.7.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -33,6 +33,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'like_dislike'
+gem 'acts_as_votable', '~> 0.11.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
