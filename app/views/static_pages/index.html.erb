@@ -1,7 +1,5 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+<% content_for :head do %>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
     <title>Let Go Now</title>  
     <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'> 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -15,7 +13,8 @@
     <link href="css/thumbs2.css" rel="stylesheet" />
     <link href="css/thumbnail-slider.css" rel="stylesheet" />
     <script src="js/thumbnail-slider.js" type="text/javascript"></script>
-</head>
+<% end %>
+<% content_for :content do %>
     <div class="container-fuild">
         <nav class="navbar navbar-default nav1" role="navigation">
             <div class="container">
@@ -218,125 +217,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row footer">
-                <div class="col-md-4">
-                    <h6><b class="bottom_b">RANDOM POSTS</b></h6>
-                          <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h6><b class="bottom_b">RECENT POSTS</b></h6>
-                          <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h6><b class="bottom_b">RECENT IN SPORT</b></h6>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12 footer-fix">
-                        <div class="col-md-5 footer_img">
-                            <a href="" title=""><img src="images/s1.jpg" alt=""></a>
-                        </div>
-                        <div class="col-md-7 footer_post">
-                            <b><a href="" title="">Old books stacked on top of a ladder</a></b>
-                            <p> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
     <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
@@ -344,5 +225,4 @@
     <script type='text/javascript' src='js/camera.min.js'></script> 
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="js/homepage.js"></script>
-</body> 
-</html>
+<% end %>
