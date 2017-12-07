@@ -1,0 +1,104 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+body {
+	font-family: fantasy;
+}
+
+.img-address-left {
+	width: 320px;
+	height: 250px;
+	box-shadow: 0px 5px 5px 0px #333;
+}
+
+.img-address-right {
+	width: 70px;
+	height: 70px;
+	box-shadow: 0px 2px 3px 0px #89898a;
+    border-radius: 6px;
+}
+
+.fix-hover-a:hover {
+	text-decoration: none;
+}
+
+.fix-margin-bottom-address {
+	margin-bottom: 20px;
+}
+
+.img-people {
+	width: 250px;
+	height: 200px;
+	position: relative;
+    box-shadow: 0px 6px 5px -5px #333;
+    border-radius: 4px;
+}
+
+.margin-img-people {
+	margin-left: 72px;
+}
+
+.title-and-img {
+	margin-top: -52px;
+    position: absolute;
+    margin-left: 12px;
+}
+
+.img-recent-post {
+	width: 280px;
+	height: 200px;
+	border: 2px solid #e4e4e4;
+}
+
+.fix-margin-recent {
+	margin-bottom: 20px;
+}
+
+.fix-margin-left {
+	margin-left: 0px;
+}
+
+.margin-left-people {
+	margin-left: 20px;
+}
+
+.recent-left {
+	margin-left: 20px;
+}
+
+.title-recent {
+	padding:0px;
+	margin:0px;
+}
+
+.tilte-all {
+	text-shadow: 1px 5px 5px #dea2a2;
+    border-bottom: 2px solid #e49494;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: cursive;
+    font-size: 30px;
+    color:red;
+}
+
+.title-and-img span {
+	color:green;
+}
+.title-and-img a {
+    font-family: fantasy;;
+    color: aqua;
+    font-size: 20px;
+
+}
+
+.title-and-img > .glyphicon-time {
+	color:#fff !important;
+}
