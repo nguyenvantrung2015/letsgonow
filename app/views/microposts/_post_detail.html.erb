@@ -42,55 +42,15 @@
         </tr>
       </table>
       {{-- comment --}}
-      @foreach($comment as $cmt)
-      <table style="width: 100%;">
-        <tr>
-          <td style="padding-right: 20px" width="100">
-            <img src="img/avatar/ava5.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </td>
-          <td align="left">
-            <span class="page-newsfeed-06">
-              <a href="" title="">{{$cmt->userName($cmt->id_user)}}</a>
-            </span>
-            <span class="font-custom-01">
-              <br> 3 hours ago 
-            </span>               
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td align="left">
-            {{-- comment --}}
-            {{$cmt->content}}
-          </td>
-        </tr>
-      </table><br>
-      @endforeach
-      {{-- write comment --}}
-      <form action="writeComment" method="POST" role="form" >
-        {{ csrf_field() }}
-        <label for="">write comment</label>
-        <table style="background-color: #FFF;width: 100%;">
-          <tr>
-            <td style="padding-right: 20px" width="100">
-              <img src="img/avatar/ava5.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-            </td>
-            <td align="left">
-              {{$user->name}}            
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td align="left">
-              {{-- comment --}}
-              <input type="hidden" name="diary_id" value='{{ $diary->id }}' />
-              <input type="text" class="form-control" name="comment" placeholder="input comment">
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <br>
-            </td>
-          </tr>
-        </table><br>
-      </form>
+      <hr />
+      <div id="comment-form">
+      <%= render 'comments/comment_form' %>
+      </div>  
+      <div id="comments-list">
+        <%= render 'comments/test', test: @comments %>
+      </div>
+
+    
 
     </div>
 

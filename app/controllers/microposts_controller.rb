@@ -16,7 +16,10 @@ class MicropostsController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @micropost = Micropost.find(params[:id])
+    @comments = @micropost.comments
+    @new_comment = @micropost.comments.new
   end
+  
   def edit
     @user = User.find(current_user.id)
     @micropost = Micropost.find(params[:id])

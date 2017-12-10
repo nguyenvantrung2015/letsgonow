@@ -19,7 +19,9 @@ root 'static_pages#home'
     end
   end
 
-resources :microposts
+resources :microposts do
+    resources :comments, except: [:show, :edit]
+  end
 resources :relationships,       only: [:create, :destroy]
 
 end
