@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
 get '/home', to: 'static_pages#home'
+get '/index', to: 'static_pages#index'
+get '/test', to: 'static_pages#test'
 get '/help', to: 'static_pages#help'
 get '/about', to: 'static_pages#about'
 get '/contact', to: 'static_pages#contact'
@@ -17,7 +19,7 @@ root 'static_pages#home'
     end
   end
 
-resources :microposts,          only: [:create, :destroy]
+resources :microposts
 resources :relationships,       only: [:create, :destroy]
 
 end

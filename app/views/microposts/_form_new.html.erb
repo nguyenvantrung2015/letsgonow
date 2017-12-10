@@ -1,0 +1,53 @@
+
+<div id="edit-user" class="tab-pane active">
+    <div class="col-md-9 personal-info">
+       
+              <div class=" well" style="margin-left: 20px; margin-right: 20px">
+                <%= form_for(@micropost) do |f| %>
+                <div id="clock">
+                    <img src="<%= @micropost.picture.url %>" id ='image1' style="height: 250px;width: 485px" >
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Image :</label>
+                    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+                </div>
+                <div class="form-group">
+                    <%= f.text_field :title, class: 'form-control',placeholder: "Title" %>
+                </div>
+                <div class="form-group">  
+                
+                <%= f.select :district_id, @districts.map{ |c| [c.name, c.id] },
+                {include_blank: t(".choose_District")},
+                {class: "form-control"} %>
+                        
+
+
+    </div>
+    
+<%= f.text_area :content, placeholder: "Compose new post...", size: "24x6" %>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+<% end %>
+</div>
+
+
+
+<script>
+  $(document).ready(function () {
+    $('#image1').attr('src');
+    console.log($('#image1').attr('src'));
+    $('input[name="micropost[picture]"]').on('change',function () {
+      if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#image1').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(this.files[0]);
+  }
+})
+})
+</script>
+
+
+</div>
+</div>

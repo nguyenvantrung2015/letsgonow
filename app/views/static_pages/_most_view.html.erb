@@ -1,0 +1,27 @@
+<% i= @posts[0] %>
+<h5><b class="bottom_b">Most views</b></h5>
+<div class="col-md-5 thumbs-fix">
+  <a href="#" class="thumbnail">
+    <img src="images/image-slider-1.jpg" alt="" class="image-thumb">
+  </a>
+  <a href="" title="">
+    <h4 class="title-img"><%= i.title %></h4>
+  </a>
+  <p class="title-img"> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
+</div>
+<div class="col-md-7">
+  <% @posts.each do |post| %>
+  <% if post.eql? i  then %>
+  <% next %>
+  <% end %>
+  <div class="col-md-12 boder-list-img">
+    <div class="col-md-3">
+      <img src="images/image-slider-1.jpg" class="fix-list-width" alt="">
+    </div>
+    <div class="col-md-9">
+      <a href="" title=""><h6><b><%= post.title %></b></h6></a>
+      <p > <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
+    </div>
+  </div>
+  <% end %>  
+</div>

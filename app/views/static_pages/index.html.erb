@@ -1,0 +1,185 @@
+
+<div class="container-fuild">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3 header-inner">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <nav class="navbar navbar-default nav2" role="navigation">
+                <div class="collapse navbar-collapse" id="navbar-brand-centered">
+                    <ul class="nav navbar-nav nav3">
+                        <li><a href="#">HOME</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ADDRESS</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Bien</a></li>
+                                <li><a href="#">Doi nui</a></li>
+                                <li><a href="#">Dong Bang</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">DOCUMENTATION</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <%= render 'slider_top' %>
+            <!-- <div class="slider1">
+                <div class="camera_wrap camera_magenta_skin slider2" id="camera_wrap_2">
+                    <div data-thumb="images/slides/thumbs/bridge.jpg" data-src="images/slides/bridge.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+                        </div>
+                    </div>
+                    <div data-thumb="images/slides/thumbs/leaf.jpg" data-src="images/slides/leaf.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+                        </div>
+                    </div>
+                    <div data-thumb="images/slides/thumbs/road.jpg" data-src="images/slides/road.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            <em>It's completely free</em> (even if a donation is appreciated)
+                        </div>
+                    </div>
+                    <div data-thumb="images/slides/thumbs/sea.jpg" data-src="images/slides/sea.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera slideshow provides many options <em>to customize your project</em> as more as possible
+                        </div>
+                    </div>
+                    <div data-thumb="images/slides/thumbs/shelter.jpg" data-src="images/slides/shelter.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
+                        </div>
+                    </div>
+                    <div data-thumb="images/slides/thumbs/tree.jpg" data-src="images/slides/tree.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Different color skins and layouts available, <em>fullscreen ready too</em>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-9 fix-padding">
+                <div class="row">
+                    <div class="col-md-12">
+                                <!--
+								most view
+                            -->
+                            <%= render 'most_view' %>
+                            <%= render 'address' %>
+                            <%= render 'recent' %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12 fix-padding">
+                        <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span id="search_concept"></span><span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">Ha Noi</a></li>
+                                    <li><a href="#its_equal">Hai Phong</a></li>
+                                    <li><a href="#greather_than">Bac Giang</a></li>
+                                    <li><a href="#less_than">Thai Nguyen</a></li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">         
+                            <input type="text" class="form-control" name="x" placeholder="Search term...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 facebook fix-padding">
+                        <h5><b class="bottom_b">FACEBOOK</b></h5>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs&width=255&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=334879800309797" width="255" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                    <div class="col-md-12 fix-padding random_post_content">
+                        <%= render "top_user" %>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container"> 
+        <div class="row footer1">
+            <div id="thumbnail-slider">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <a class="thumb" href="images/s1.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s5.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s1.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s5.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s5.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s1.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s3.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s4.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s5.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s2.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="thumb" href="images/s4.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+</div>
+

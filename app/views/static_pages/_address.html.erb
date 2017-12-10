@@ -1,0 +1,75 @@
+<!-- <h5><b class="bottom_b">Address</b></h5>
+<div class="owl-carousel">
+  <% @addresses.each do |address| %>
+  <div class="item img_slider"><img src="images/s1.jpg" alt="">
+    <div>
+      <h5 class="text-center"><i class="fa fa-check address_icon " aria-hidden="true"></i><a href="" title=""><b> <%= address.name %></b></a></h5>
+      <p class="title-img"> <i class="fa fa-calendar-times-o" aria-hidden="true"></i> March 17, 2016</p>
+    </div>
+  </div>
+  <% end %>
+
+</div> -->
+<div class="container">
+  
+  <div class='row'>
+    <div class='col-md-9'>
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          <div class="item  active">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg"></a>
+                <center>sdofhasfdsfasdf asdfasdf asdfasdfas </center> 
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg"></a>
+                sdofhasfdsfasdf asdfasdf asdfasdfas
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg"></a>
+                sdofhasfdsfasdf asdfasdf asdfasdfas
+              </div>        
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">4</a>
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">5</a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">6</a>
+              </div>        
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">7</a>
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">8</a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="images/s1.jpg">9</a>
+              </div>      
+            </div>
+          </div>
+        </div>
+        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+      </div>                          
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+  $('#media').carousel({
+    pause: true,
+    interval: false,
+  });
+});
+</script>

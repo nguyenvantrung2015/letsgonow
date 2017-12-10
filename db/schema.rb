@@ -10,14 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209101601) do
+ActiveRecord::Schema.define(version: 20171209133231) do
 
-  create_table "microposts", force: :cascade do |t|
-    t.text "content"
-    t.integer "user_id"
+  create_table "districts", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text "title"
+    t.text "content"
+    t.integer "like_count"
+    t.boolean "accept", default: false
     t.string "picture"
+    t.integer "user_id"
+    t.integer "district_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["district_id"], name: "index_microposts_on_district_id"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
@@ -35,6 +46,10 @@ ActiveRecord::Schema.define(version: 20171209101601) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "address"
+    t.string "hobby"
+    t.string "date_of_birth"
+    t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
