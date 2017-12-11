@@ -12,7 +12,7 @@
             </td>
             <td>
               <span class="page-newsfeed-06">
-                <a href="" title=""><%= @micropost.user.name %></a>
+                <a href="" title=""><%= @micropost.district.name %></a>
               </span>
               <br> Posted <%= time_ago_in_words(@micropost.created_at) %> ago. &nbsp;&nbsp;&nbsp;
               
@@ -41,14 +41,13 @@
           </td>
         </tr>
       </table>
-      {{-- comment --}}
-      <hr />
+      <hr />      
+      <div id="comments-list">
+        <%= render 'comments/comment', comments: @comments %>
+      </div>
       <div id="comment-form">
       <%= render 'comments/comment_form' %>
       </div>  
-      <div id="comments-list">
-        <%= render 'comments/test', test: @comments %>
-      </div>
 
     
 

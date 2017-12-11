@@ -1,31 +1,26 @@
-<%= len = comments.length %>
-<% i=0 %>
 <table style="width: 100%;">
-<% comments.each do |comment| %>
-  <% if i< (len -1) then %>
-      
-        <tr>
+<% test.each do |t| %>
+
+<tr>
           <td style="padding-right: 20px" width="100">
             <img src="bai_viet.png" class="img-circle" height="55" width="55" alt="Avatar">
           </td>
           <td align="left">
             <span class="page-newsfeed-06">
-              <%= comment.user.name %>
+              <%= t.user.name %>
             </span>
             <span class="font-custom-01">
               <br>
-              <%= time_ago_in_words(comment.created_at) %> ago.
+              <%= time_ago_in_words(t.created_at) %> ago.
             </span>               
           </td>
         </tr>
         <tr>
           <td></td>
           <td align="left">
-            <%= comment.comment %>
+            <%= t.comment %>
           </td>
         </tr>
-      
-      <% i+=1 %>
-  <% end %>
-  <%end%>
-  </table><br>
+
+<% end %>
+</table>

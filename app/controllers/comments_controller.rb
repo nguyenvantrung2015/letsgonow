@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
     @micropost = Micropost.find(params[:micropost_id])
-    @comment2= Comment.all
+    @comments= Comment.all
     @comment = @micropost.comments.build(comment_params) # strong parameters
     if @comment.save
       respond_to do |format|
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
       end
       format.js # JavaScript response
     end
-  end
+  end  
   private
 
     def comment_params
