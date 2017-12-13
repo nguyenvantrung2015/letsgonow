@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
   def create
     @micropost = Micropost.find(params[:micropost_id])
-    @comments= Comment.all
+    @notification = @micropost.notifications.build(params.require(:comment).permit(:notification,:user_id,:micropost_id)) # strong parameters
+    @notification.save
+    @comments= Comment.where("micropost_id = ?",params[:micropost_id])
     @comment = @micropost.comments.build(comment_params) # strong parameters
     if @comment.save
       respond_to do |format|

@@ -1,4 +1,4 @@
-<%= len = comments.length %>
+<% len = comments.length %>
 <% i=0 %>
 <table style="width: 100%;">
 <% comments.each do |comment| %>
@@ -6,7 +6,7 @@
       
         <tr>
           <td style="padding-right: 20px" width="100">
-            <img src="bai_viet.png" class="img-circle" height="55" width="55" alt="Avatar">
+            <%= image_tag comment.user.picture.url ,class: "img-circle", height:"55", width:"55" if current_user.picture?%>
           </td>
           <td align="left">
             <span class="page-newsfeed-06">

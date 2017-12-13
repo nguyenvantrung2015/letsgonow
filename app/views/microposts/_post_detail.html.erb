@@ -1,61 +1,78 @@
 
 <div id="edit-user" class="tab-pane active">
-<div class="col-sm-9">  
-  <div class="row">
-    <div class=" well" style="margin-left: 20px; margin-right: 20px">
-      <div align="left">
-        <table>
-          <tr>
-            <td style="padding-right: 20px">
-              <img src="<%= @micropost.picture.url %>" class="img-circle" height="55" width="55" alt="Avatar">
-              
-            </td>
-            <td>
-              <span class="page-newsfeed-06">
-                <a href="" title=""><%= @micropost.district.name %></a>
-              </span>
-              <br> Posted <%= time_ago_in_words(@micropost.created_at) %> ago. &nbsp;&nbsp;&nbsp;
-              
+  <div class="col-sm-9">  
+    <div class="row">
+      <div class=" well" style="margin-left: 20px; margin-right: 20px">
+        <div align="left">
+          <table>
+            <tr>
+              <td style="padding-right: 20px">
 
-              
-              
-              <a href="editPost/{{$diary->id}}" class="fa fa-pencil" data-toggle="modal" data-target="#editPost">edit</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="deletePost/{{$diary->id}}" class="fa fa-trash">delete</a>
-              
-            </td>
-          </tr>
-        </table>
-      </div>
-      <img src="<%= @micropost.picture.url %>" alt="Paris" width="100%" height="300">
-      <center><h4 class="page-newsfeed-06"> <%= @micropost.title %></h4></center> 
-      <p><%= @micropost.content %></p> 
-      <hr style="background-color: #000;height: 1px;"> 
-      <table>
-        <tr>
-          <td width="70px">
-            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 100
-          </td>
-          <td width="50%">
-            <i class="fa fa-comments-o" aria-hidden="true"></i> 30
-          </td>
-        </tr>
-      </table>
-      <hr />      
-      <div id="comments-list">
-        <%= render 'comments/comment', comments: @comments %>
-      </div>
-      <div id="comment-form">
-      <%= render 'comments/comment_form' %>
-      </div>  
+                <%= image_tag @micropost.user.picture.url ,class: "img-circle", height:"55", width:"55" if current_user.picture?%>
 
-    
+              </td>
+              <td>
+                <span class="page-newsfeed-06">
+                  <a href="" title=""><%= @micropost.user.name %></a>                  
+                </span>
+                <br> 
+                <div style="color: #000;">
+                  <%= form_for [@micropost, @new_save_post],id: "form1" do |f| %>
+                  <%= time_ago_in_words(@micropost.created_at) %> ago. &nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-map-marker"></i>  
+                  <a class="tag badge badge-default overflow-hidden">
+                    <%= @micropost.district.name %>
+                  </a>
+                  &nbsp;&nbsp;&nbsp;
+                  <%= link_to "Edit", edit_micropost_path(@micropost),class: "fa fa-pencil" %>
+                  &nbsp;&nbsp;&nbsp;
+                  <a href="deletePost/{{$diary->id}}" class="fa fa-trash" >delete</a>&nbsp;&nbsp;&nbsp;
+                  <!-- for form -->
+                  <%= f.hidden_field :user_id, value: @user.id %>
+                  <%= f.hidden_field :micropost_id, value: @micropost.id %>
+                  <a onclick="$(this).closest('form').submit()" class="fa fa-bookmark" > add</a>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <img src="<%= @micropost.picture.url %>" alt="Paris" width="100%" height="300">
+        <center><h4 class="page-newsfeed-06"> <%= @micropost.title %></h4></center> 
+        <p><%= @micropost.content %></p> 
+        <hr /> 
+        <!-- form like -->
+        <%= form_for [@micropost, @new_like], remote: true do |f| %>
+        <% result= "#{@user.name} liked your post" %>
+        <%= f.hidden_field :notification, value: result %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.hidden_field :micropost_id, value: @micropost.id %>
+        <span id="like">
+          <%= render 'likes/button_like', liked: @liked %>
+        </span>
+        <span id="all-like">
+          <%= render 'likes/all_like', likes: @likes %>
+        </span>  
+        <% end %>
+        
+        <br>
+        <div style="background-color: #f6f7f1">  
+
+          <div id="comments-list">
+            <%= render 'comments/comment', comments: @comments %>
+          </div>
+          <div id="comment-form">
+            <%= render 'comments/comment_form' %>
+          </div> <br><br><br> 
+        </div>
+
+
+
+      </div>
+
+
 
     </div>
 
-
-
   </div>
-
-</div>
 </div>

@@ -3,7 +3,6 @@ class CreateMicroposts < ActiveRecord::Migration[5.0]
     create_table :microposts do |t|
       t.text :title
       t.text :content
-      t.integer :like_count, default: 0
       t.boolean :accept, default: false
       t.string :picture
 

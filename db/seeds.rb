@@ -1,11 +1,30 @@
 District.create!([
-{name: "Hanoi"},
-{name: "Da Nang"},
-{name: "Hai Phong"},
-{name: "Da Lat"},
-{name: "TP Ho Chi Minh"},
-{name: "Quang Ninh"},
-{name: "Thanh Hoa"}
+{name: "Hai Duong"},
+{name: "Hung Yen"},
+{name: "Ha Nam"},
+{name: "Nam Dinh"},
+{name: "Thai Binh"},
+{name: "Hoa Binh"},
+{name: "Quang Nam"},
+{name: "Binh Duong"},
+{name: "Long An"},
+{name: "Ha Tay"},
+{name: "Tuyen Quang"},
+{name: "Cao Bang"},
+])
+District.create!([
+{name: "Hai Duong"},
+{name: "Hung Yen"},
+{name: "Ha Nam"},
+{name: "Nam Dinh"},
+{name: "Thai Binh"},
+{name: "Hoa Binh"},
+{name: "Quang Nam"},
+{name: "Binh Duong"},
+{name: "Long An"},
+{name: "Ha Tay"},
+{name: "Tuyen Quang"},
+{name: "Cao Bang"},
 ])
 # Users
 User.create!(name:  "Example User",

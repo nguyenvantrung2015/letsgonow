@@ -15,13 +15,29 @@ class MicropostsController < ApplicationController
   end
   def show
     @user = User.find(current_user.id)
+    @liked= Like.where("user_id= ? and micropost_id = ?",current_user.id,params[:id])
     @micropost = Micropost.find(params[:id])
+    @notifications= @user.notifications
     @comments = @micropost.comments
+    @likes= @micropost.likes
     @new_comment = @micropost.comments.new
+    @new_like = @micropost.likes.new
+    @new_save_post = @micropost.save_posts.new
   end
   
+  def update
+    @micropost = Micropost.find(params[:id])
+    if @micropost.update_attributes(micropost_params)
+      flash[:success] = "Post updated"
+      redirect_to @micropost
+    else
+      render 'edit'
+    end
+  end
+
   def edit
     @user = User.find(current_user.id)
+    @notifications= @user.notifications
     @micropost = Micropost.find(params[:id])
     @districts = District.all
   end
@@ -32,6 +48,7 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
   def new
+    @notifications= current_user.notifications
     if logged_in?
       @micropost  = current_user.microposts.build
       @feed_items = current_user.feed.paginate(page: params[:page])

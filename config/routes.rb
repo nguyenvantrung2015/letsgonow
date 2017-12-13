@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
 get '/home', to: 'static_pages#home'
 get '/index', to: 'static_pages#index'
+get '/address/:id', to: 'static_pages#address', as: 'address'
 get '/test', to: 'static_pages#test'
 get '/help', to: 'static_pages#help'
-get '/about', to: 'static_pages#about'
+get "/about" => 'static_pages#about', as: 'about'
 get '/contact', to: 'static_pages#contact'
 get '/signup', to: 'users#new'
 post '/signup',  to: 'users#create'
@@ -21,6 +22,9 @@ root 'static_pages#home'
 
 resources :microposts do
     resources :comments, except: [:show, :edit]
+    resources :likes
+    resources :save_posts
+    
   end
 resources :relationships,       only: [:create, :destroy]
 

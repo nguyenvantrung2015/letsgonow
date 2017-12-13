@@ -68,7 +68,7 @@ textarea.form-control {
     background-image:url('');
     background-size:cover;
     background-position: center;
-    height: 250px;
+    height: 300px;
     border: 1px solid #fff;
 }
 
@@ -146,4 +146,9 @@ textarea.form-control {
 
 .padding-user {
     padding:5px;
+}
+.well{
+        background-color: #FFF;
+        border: 1px solid #FFF;
+        padding: 0px;
 }

@@ -6,15 +6,18 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    @notifications= @user.notifications
   end
 
   def show
     @user = User.find(params[:id])
+    @notifications= @user.notifications
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
     @user = User.new
+    
   end
 
   def create
@@ -30,6 +33,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @notifications= @user.notifications
   end
 
   def update
@@ -62,8 +66,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.require(:user).permit(:name, :email, :password,:password_confirmation,:picture)
     end
 
     # Before filters
