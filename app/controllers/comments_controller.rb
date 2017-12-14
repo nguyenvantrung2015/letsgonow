@@ -1,6 +1,18 @@
 class CommentsController < ApplicationController
   def create
     @micropost = Micropost.find(params[:micropost_id])
+    if params["comment"]["comment"] == "==delete=="
+      @comment = Comment.where("id= ?",params[:comment_id]).first
+      @comment.destroy
+      @comments= Comment.where("micropost_id = ?",params[:micropost_id])
+      respond_to do |format|
+        format.html do
+          redirect_to @micropost
+        end
+        format.js # JavaScript response
+      end
+    else
+    #new comment    
     @notification = @micropost.notifications.build(params.require(:comment).permit(:notification,:user_id,:micropost_id)) # strong parameters
     @notification.save
     @comments= Comment.where("micropost_id = ?",params[:micropost_id])
@@ -13,6 +25,8 @@ class CommentsController < ApplicationController
         end
         format.js # JavaScript response
       end
+    end
+    #end new comment
     end
   end
   def destroy

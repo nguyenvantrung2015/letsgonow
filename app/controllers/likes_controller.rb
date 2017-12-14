@@ -48,7 +48,7 @@ class LikesController < ApplicationController
   private
 
   def like_params
-    params.require(:like).permit(:comment, :user_id,:micropost_id)
+    params.require(:like).permit(:notification, :user_id,:micropost_id)
   end
   
 end

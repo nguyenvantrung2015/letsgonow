@@ -15,6 +15,7 @@ class MicropostsController < ApplicationController
   end
   def show
     @user = User.find(current_user.id)
+    @marked= SavePost.where("user_id = ? and micropost_id = ?",current_user.id,params[:id])
     @liked= Like.where("user_id= ? and micropost_id = ?",current_user.id,params[:id])
     @micropost = Micropost.find(params[:id])
     @notifications= @user.notifications

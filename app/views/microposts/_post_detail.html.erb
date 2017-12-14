@@ -17,7 +17,7 @@
                 </span>
                 <br> 
                 <div style="color: #000;">
-                  <%= form_for [@micropost, @new_save_post],id: "form1" do |f| %>
+                  <%= form_for [@micropost, @new_save_post], remote: true do |f| %>
                   <%= time_ago_in_words(@micropost.created_at) %> ago. &nbsp;&nbsp;&nbsp;
                   <i class="fa fa-map-marker"></i>  
                   <a class="tag badge badge-default overflow-hidden">
@@ -30,7 +30,9 @@
                   <!-- for form -->
                   <%= f.hidden_field :user_id, value: @user.id %>
                   <%= f.hidden_field :micropost_id, value: @micropost.id %>
-                  <a onclick="$(this).closest('form').submit()" class="fa fa-bookmark" > add</a>
+                  <span id="bookmark">
+                    <%= render 'save_posts/bookmark', marked: @marked %>
+                  </span>
                   <% end %>
                 </div>
               </td>
@@ -57,10 +59,16 @@
         
         <br>
         <div style="background-color: #f6f7f1">  
-
+          <!-- comment list -->
+          <%= form_for [@micropost, @new_comment], remote: true do |f| %>
+          <%= f.hidden_field :user_id, value: @user.id %>
+          <%= f.hidden_field :micropost_id, value: @micropost.id %>
+          <%= f.hidden_field :comment, value: "==delete==" %>
           <div id="comments-list">
             <%= render 'comments/comment', comments: @comments %>
           </div>
+          <% end %>
+          <!-- end comment list -->
           <div id="comment-form">
             <%= render 'comments/comment_form' %>
           </div> <br><br><br> 

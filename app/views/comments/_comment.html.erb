@@ -15,6 +15,8 @@
             <span class="font-custom-01">
               <br>
               <%= time_ago_in_words(comment.created_at) %> ago.
+              &nbsp;&nbsp;
+              <button name="comment_id" value="<%= comment.id %>" type="submit" class="fa fa-trash">&nbsp;&nbsp;delete</button>
             </span>               
           </td>
         </tr>

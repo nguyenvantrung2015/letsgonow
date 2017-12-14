@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20171212084850) do
   create_table "microposts", force: :cascade do |t|
     t.text "title"
     t.text "content"
-    t.integer "like_count", default: 0
     t.boolean "accept", default: false
     t.string "picture"
     t.integer "user_id"

@@ -30,7 +30,7 @@ class StaticPagesController < ApplicationController
   end
   def index
     @notifications= current_user.notifications
-    @posts = Micropost.order("like_count DESC").limit(5)
+    @posts= Micropost.joins(:likes).group('microposts.id').order('count(likes.id) desc').limit(5)
     @addresses= District.all
     @recentPosts= Micropost.order("updated_at DESC").limit(3)
     @topUsers= User.joins(:microposts).group('users.id').order('count(microposts.id) desc').limit(10)

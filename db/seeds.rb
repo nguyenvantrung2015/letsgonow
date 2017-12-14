@@ -56,20 +56,56 @@ User.create!(name:  "Example User",
 end
 
 # Microposts
-users = User.order(:created_at).take(6)
-50.times do |n|
-  content = "I dont know reason why I love you, but you are perfect"
-  title = "this is title for example-#{n+1}"
-  picture = "chitiet.png"
-  users.each { |user| user.microposts.create!(content: content,
-                                              title: title,
-                                              like_count: n,
+Micropost.create!([{content: "What is the internet of things",
+                                              title: "What is the internet of things",
                                               accept: true,
                                               district_id: 1,
-                                              picture: picture
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"},
+                                              {content: "What is the internet of things",
+                                              title: "What is the internet of things",
+                                              accept: true,
+                                              district_id: 1,
+                                              user_id: 1,
+                                              picture: "s1.JPG"}
 
-    ) }
-end
+    ]) 
 
 # Following relationships
 users = User.all
@@ -78,3 +114,14 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+Like.create!([
+{user_id: 1,micropost_id:1},
+{user_id: 1,micropost_id:2},
+{user_id: 1,micropost_id:3},
+{user_id: 1,micropost_id:4},
+{user_id: 1,micropost_id:5},
+{user_id: 1,micropost_id:6},
+{user_id: 1,micropost_id:7},
+{user_id: 1,micropost_id:8}
+])
