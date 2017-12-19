@@ -18,11 +18,9 @@ gem 'carrierwave',             '1.1.0'
 gem 'mini_magick',             '4.7.0'
 gem 'fog-aws',                 '2.0.0'
 gem "font-awesome-rails"
-gem 'devise'
-gem "mailboxer"
-gem 'gravatar_image_tag'
-gem 'chosen-rails'
-gem 'jquery-turbolinks'
+
+
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
