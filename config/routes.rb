@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'sessions/new'
 
 get '/home', to: 'static_pages#home'
@@ -13,6 +14,7 @@ post '/signup',  to: 'users#create'
 get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
+get '/conversations', to: 'conversations#index'
 root 'static_pages#home'
   resources :users do
     member do
@@ -27,5 +29,17 @@ resources :microposts do
     
   end
 resources :relationships,       only: [:create, :destroy]
+resources :messages, only: [:new, :create]
+resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+    post :restore
+    post :mark_as_read
+  end
 
+  collection do
+    delete :empty_trash
+  end
 end
+end
+
